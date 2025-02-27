@@ -1,0 +1,8 @@
+---
+title: "Halal Stock Screener"
+format: html
+---
+
+# Welcome to the Halal Stock Screener
+
+This dashboard contains financial screening data for stocks.

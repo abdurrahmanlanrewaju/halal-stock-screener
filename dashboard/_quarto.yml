@@ -1,0 +1,14 @@
+project:
+  type: website
+
+website:
+  title: "Halal Stock Screener"
+  navbar:
+    left:
+      - text: "Dashboard"
+        href: halal_stocks.html
+
+format:
+  html:
+    theme: cosmo
+    toc: true

@@ -46,8 +46,13 @@ jobs:
       - name: Render Dashboard
         run: quarto render dashboard/halal_stocks.qmd
 
+      - name: Render Quarto Website
+        run: |
+          quarto render dashboard
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.GH_PAT }}
-          publish_dir: dashboard/_site
+         personal_token: ${{ secrets.GH_PAT }}
+        publish_dir: _site
+
