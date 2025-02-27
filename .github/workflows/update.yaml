@@ -29,9 +29,9 @@ jobs:
         run: |
           git config --global user.email "github-actions@github.com"
           git config --global user.name "GitHub Actions"
-          git add data/
-          git commit -m "Automated data update"
-          git push origin main
+          git add data/ || echo "No changes to add"
+          git diff --staged --quiet || git commit -m "Automated data update" || echo "No changes to commit"
+          git push origin main || echo "No changes to push"
 
   deploy_dashboard:
     runs-on: ubuntu-latest
